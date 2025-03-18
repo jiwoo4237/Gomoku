@@ -840,6 +840,7 @@ GameObject:
   - component: {fileID: 549960614}
   - component: {fileID: 549960613}
   - component: {fileID: 549960615}
+  - component: {fileID: 549960616}
   m_Layer: 5
   m_Name: Main Panel
   m_TagString: Untagged
@@ -924,6 +925,18 @@ MonoBehaviour:
   RankingPanel: {fileID: 1995805009728476610, guid: 228715c514cfe0a4bb9f5226f40bed5b, type: 3}
   ProfilePanel: {fileID: 1995805009728476610, guid: e4b239a8815a2044ea08997afbf83bd0, type: 3}
   canvasTransform: {fileID: 234400114}
+--- !u!225 &549960616
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549960611}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &878733088
 GameObject:
   m_ObjectHideFlags: 0

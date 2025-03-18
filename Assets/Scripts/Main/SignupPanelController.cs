@@ -10,7 +10,7 @@ public class SignupPanelController : MonoBehaviour
     [SerializeField] private TMP_InputField PasswordInputField;
     [SerializeField] private string filePath;
 
-    private static readonly string[] BannedChars = { ",", "/", "\\", ":", "*", "\"", "<", ">", "|", " ", "{", "}", "[", "]", "(", ")"};
+    private static readonly string[] BannedChars = { ",", "<", ">", "{", "}", "[", "]", "(", ")"};
 
     private void Start()
     {
