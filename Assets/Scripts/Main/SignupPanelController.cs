@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +6,12 @@ public class SignupPanelController : MonoBehaviour
     [SerializeField] private TMP_InputField NicknameInputField;
     [SerializeField] private TMP_InputField IDInputField;
     [SerializeField] private TMP_InputField PasswordInputField;
+
+    public void OnClickSigninButton()
+    {
+        MainManager.Instance.CloseSignupPanel();
+        MainManager.Instance.ShowSigninPanel();
+    }
 
     public void OnClickSignupButton()
     {
