@@ -1,20 +1,15 @@
 using System;
 using TMPro;
 using UnityEngine;
-public struct SigninData
+public struct UserInfo
 {
     public string username;
     public string password;
 }
 
-public struct SigninResult
-{
-    public int result;
-}
-
 public struct ScoreResult
 {
-    public string id;
+    public string userId;
     public string username;
     public string nickname;
     public int score;
@@ -46,34 +41,35 @@ public class SigninPanelController : MonoBehaviour
 
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
-            // 입력창 오류 팝업
+            MainManager.Instance.ShowErrorPanel("모든 항목을\n입력해주세요.");
             return;
         }
 
-        var signinData = new SigninData();
-        signinData.username = username;
-        signinData.password = password;
-
-        // StartCoroutine(NetworkManage.Instance.Signin(signinData, () =>
-        // {
-        //     Destroy(gameObject);
-        // }, result =>
-        // {
-        //     if (result == 0)
-        //     {
-        //         Username.text = "";
-        //     }
-        //     else if (result == 1)
-        //     {
-        //         Password.text = "";
-        //     }
-        // }));
+        LoginUser(username, password);
     }
 
     public void OnClickSignupButton()
     {
         MainManager.Instance.CloseSigninPanel();
         MainManager.Instance.ShowSignupPanel();
+    }
+
+    public void LoginUser(string username, string password)
+    {
+        // 로그인 요청
+        MainManager.Instance.AttemptLogin(username, password, (result) =>
+        {
+            if (result == 0)
+            {
+                MainManager.Instance.ShowErrorPanel("아이디 또는 비밀번호가\n일치하지 않습니다.");
+            }
+            else
+            {
+                MainManager.Instance.CloseSigninPanel();
+                MainManager.Instance.ShowErrorPanel("로그인 성공했습니다.");
+                MainManager.Instance.ShowMainPanel();
+            }
+        });
     }
 
 }

@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 5988067520644983632}
   - component: {fileID: 867016899151462442}
   m_Layer: 5
-  m_Name: ID InputField
+  m_Name: Username InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,8 +1865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NicknameInputField: {fileID: 6699803320440617361}
-  IDInputField: {fileID: 5988067520644983632}
+  UsernameInputField: {fileID: 5988067520644983632}
   PasswordInputField: {fileID: 5540983641185603228}
+  filePath: 
 --- !u!225 &6573211824067775765
 CanvasGroup:
   m_ObjectHideFlags: 0

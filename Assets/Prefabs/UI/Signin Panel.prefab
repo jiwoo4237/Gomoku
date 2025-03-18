@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 8869918039459924644}
   - component: {fileID: 3690427463651231423}
   m_Layer: 5
-  m_Name: ID InputField
+  m_Name: Username InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -555,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92.9, y: 30.6}
+  m_AnchoredPosition: {x: 19.4, y: -16.1}
   m_SizeDelta: {x: 110, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &225635143426817561
@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -283}
+  m_AnchoredPosition: {x: 0, y: -270}
   m_SizeDelta: {x: 110.130005, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4208383382914455821
@@ -958,8 +958,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -283}
-  m_SizeDelta: {x: 110.130005, y: 50}
+  m_AnchoredPosition: {x: 179.8, y: -166}
+  m_SizeDelta: {x: 59.9, y: 21.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &773929614576592333
 CanvasRenderer:
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3a825c5d349bf42a006680eff140ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Username: {fileID: 0}
+  Username: {fileID: 8869918039459924644}
   Password: {fileID: 6372930531698207815}
 --- !u!225 &6635132472500373179
 CanvasGroup:
