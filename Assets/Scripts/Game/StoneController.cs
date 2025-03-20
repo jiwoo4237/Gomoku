@@ -26,4 +26,6 @@ public class StoneController : MonoBehaviour, IPointerEnterHandler, IPointerExit
             this.transform.GetChild(i).gameObject.SetActive(false);
         }
     }
+
+    // 공격 받으면 leftHearts 감소
 }
