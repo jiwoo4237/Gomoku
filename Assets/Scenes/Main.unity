@@ -390,6 +390,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47234190}
   m_CullTransparentMesh: 1
+--- !u!1 &77449028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77449030}
+  - component: {fileID: 77449029}
+  m_Layer: 0
+  m_Name: MainManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &77449029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77449028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c8ea23d428ed443aeca449ec637e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainPanel: {fileID: 549960611}
+  SigninPanel: {fileID: 3328140210892335255, guid: 15f654ede310e1e478ac5624c4b1cdd3, type: 3}
+  SignupPanel: {fileID: 7830865074060712543, guid: 8765f925688a8ce4697ba63f5c97d0e0, type: 3}
+  Canvas: {fileID: 234400114}
+  ErrorPanel: {fileID: 6412832676752804061, guid: 3682a0ad21b2b5e43990a45889adb0d6, type: 3}
+--- !u!4 &77449030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77449028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &175574367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,55 +2037,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898938880}
   m_CullTransparentMesh: 1
---- !u!1 &1903784123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1903784125}
-  - component: {fileID: 1903784124}
-  m_Layer: 0
-  m_Name: MainManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1903784124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903784123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98baf4625ca70454ba13908d2e0d07ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainPanel: {fileID: 549960611}
-  SigninPanel: {fileID: 3328140210892335255, guid: 15f654ede310e1e478ac5624c4b1cdd3, type: 3}
-  SignupPanel: {fileID: 7830865074060712543, guid: 8765f925688a8ce4697ba63f5c97d0e0, type: 3}
-  Canvas: {fileID: 234400114}
-  ErrorPanel: {fileID: 6412832676752804061, guid: 3682a0ad21b2b5e43990a45889adb0d6, type: 3}
---- !u!4 &1903784125
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903784123}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923987180
 GameObject:
   m_ObjectHideFlags: 0
@@ -23711,4 +23711,4 @@ SceneRoots:
   - {fileID: 1605494002}
   - {fileID: 234400114}
   - {fileID: 2364485886633908888}
-  - {fileID: 1903784125}
+  - {fileID: 77449030}

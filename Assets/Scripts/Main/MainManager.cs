@@ -1,15 +1,10 @@
-using System.Collections;
-using UnityEngine;
-using DG.Tweening;
-using UnityEngine.SceneManagement;
-using TMPro;
 using System;
-using System.IO;
-
-public class LoginResult
-{
-    public int result;
-}
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainManager : Singleton<MainManager>
 {
@@ -24,9 +19,8 @@ public class MainManager : Singleton<MainManager>
     private GameObject signinPanel;
     private GameObject signupPanel;
     private float fadeDuration = 0.1f;
-    private string filepath = "Assets/Data/UserInfo.csv";
 
-    void Start()
+   void Start()
     {
         ShowSigninPanel();
     }
@@ -101,49 +95,7 @@ public class MainManager : Singleton<MainManager>
         errorPanelRect.DOLocalMoveX(0f, 0.3f);
     }
 
-    public void AttemptLogin(string username, string password, Action<int> callback)
+    protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StartCoroutine(LoginCoroutine(username, password, callback));
-    }
-
-    private IEnumerator LoginCoroutine(string username, string password, Action<int> callback)
-    {
-        yield return new WaitForSeconds(0.5f); // 서버 요청 대기 시뮬레이션
-        
-        int result = CheckLogin(username, password);
-        
-        callback?.Invoke(result);
-    }
-
-    private int CheckLogin(string username, string password)
-    {
-        if (!File.Exists(filepath))
-        {
-            Debug.LogError("로그인 파일이 없습니다.");
-            return 0;
-        }
-
-        string[] lines = File.ReadAllLines(filepath);
-
-        foreach (string line in lines)
-        {
-            string[] userData = line.Split(',');
-
-            if (userData.Length == 4)
-            {
-                string storedUsername = userData[1].Trim();
-                string storedPassword = userData[2].Trim();
-
-                if (storedUsername == username && storedPassword == password)
-                {
-                    return 1; // 로그인 성공
-                }
-            }
-        }
-
-        return 0; // 로그인 실패
-    }    protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-    
     }
 }

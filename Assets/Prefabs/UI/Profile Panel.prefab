@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Username: {fileID: 6295565979748386987}
   Nickname: {fileID: 264409392371073057}
-  Level: {fileID: 6157780130857644565}
+  Date: {fileID: 6157780130857644565}
   Score: {fileID: 6403519014788937982}
 --- !u!1 &2112915008931033467
 GameObject:
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 5947525167522281590}
   - component: {fileID: 6157780130857644565}
   m_Layer: 5
-  m_Name: Level (1)
+  m_Name: Date (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level
+  m_text: Date
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff9d4f206561795498eac53cd9c50fb2, type: 2}
   m_sharedMaterial: {fileID: 3140313209510394370, guid: ff9d4f206561795498eac53cd9c50fb2, type: 2}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 1459689306741314441}
   - component: {fileID: 8596323134534848858}
   m_Layer: 5
-  m_Name: Level
+  m_Name: Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level
+  m_text: Date
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff9d4f206561795498eac53cd9c50fb2, type: 2}
   m_sharedMaterial: {fileID: 3140313209510394370, guid: ff9d4f206561795498eac53cd9c50fb2, type: 2}

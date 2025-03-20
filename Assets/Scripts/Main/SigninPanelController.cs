@@ -1,33 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-public struct UserInfo
-{
-    public string username;
-    public string password;
-}
-
-public struct ScoreResult
-{
-    public string userId;
-    public string username;
-    public string nickname;
-    public int score;
-}
-
-[Serializable]
-public struct ScoreInfo
-{
-    public string username;
-    public string nickname;
-    public int score;
-}
-
-[Serializable]
-public struct Scores
-{
-    public ScoreInfo[] scores;
-}
 
 public class SigninPanelController : MonoBehaviour
 {
@@ -57,11 +30,12 @@ public class SigninPanelController : MonoBehaviour
     public void LoginUser(string username, string password)
     {
         // 로그인 요청
-        MainManager.Instance.AttemptLogin(username, password, (result) =>
+        LoginManager.Instance.AttemptLogin(username, password, (result) =>
         {
             if (result == 0)
             {
                 MainManager.Instance.ShowErrorPanel("아이디 또는 비밀번호가\n일치하지 않습니다.");
+                return;
             }
             else
             {
