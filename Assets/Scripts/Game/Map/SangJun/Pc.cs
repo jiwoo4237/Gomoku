@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Pc : HaveHp
 {
- 
+    
     public enum AttackType {
         NONE,
         CHOOSE_ATTACK,
@@ -16,6 +16,7 @@ public class Pc : HaveHp
     }
 
     public AttackType _attackType;
+    public bool IsAleayAttack;
     public int[] RangeAttackRange;
     [SerializeField] private int _attackPower=1;
     [SerializeField] private int _attackRange = 1;
@@ -65,13 +66,16 @@ public class Pc : HaveHp
 
     public void ChoseAttack(Pc pc,int attackPower) { 
         pc.Hp -= attackPower;
+        IsAleayAttack = true;
     }
-    public void Buff(Pc pc, int attackPower) { 
+    public void Buff(Pc pc, int attackPower) {
         pc.Hp += attackPower;
+        IsAleayAttack = true;
     }
     public void ChoseAttack(Obstacle oc, int attackPower)
     {
         oc.Hp -= attackPower;
+        IsAleayAttack = true;
     }
 
 

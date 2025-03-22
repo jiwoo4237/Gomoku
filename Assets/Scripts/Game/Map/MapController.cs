@@ -9,7 +9,7 @@ using UnityEngine.Tilemaps;
 
 public class MapController : MonoBehaviour
 {
-    [SerializeField] private GameObject obstacle;
+    //[SerializeField] private GameObject obstacle;
     [SerializeField] private GameObject tilePrefab;
     [SerializeField] private Transform tilesParent;
     private Tile[] _tiles;
@@ -23,16 +23,14 @@ public class MapController : MonoBehaviour
 
     public void CreateMap()
     {
-        // 타일 생성 및 Mc에 등록
         for (int i = 0; i <= width -1; i++)
         {
             for (int j = 0; j <= width - 1; j++)
             {
                 Vector2 tilePos = new Vector2(j, i);
+                tilePos = new Vector2(tilePos.x -3.5f, tilePos.y -3.5f);
                 var tileInstance = Instantiate(tilePrefab, tilePos, Quaternion.identity, tilesParent);
-                
-
-                // 생성된 타일을 Mc에 등록
+               
                 Tile tileComponent = tileInstance.GetComponent<Tile>();
                 tileComponent.tileNumber = i * 8 + j;
                 tiles.Add(tileComponent);

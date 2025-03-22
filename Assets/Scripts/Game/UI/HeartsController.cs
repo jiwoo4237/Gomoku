@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class StoneController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class HeartsController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private int originHearts = 3;
+    [SerializeField] private GameObject Hearts; // 하트 프리팹
     private int leftHearts;
 
     void Start()
@@ -15,7 +16,7 @@ public class StoneController : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         for (int i = 0; i < leftHearts; i++)
         {
-            this.transform.GetChild(i).gameObject.SetActive(true);
+            Hearts.transform.GetChild(i).gameObject.SetActive(true);
         }
     }
 
@@ -23,7 +24,7 @@ public class StoneController : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         for (int i = 0; i < leftHearts; i++)
         {
-            this.transform.GetChild(i).gameObject.SetActive(false);
+            Hearts.transform.GetChild(i).gameObject.SetActive(false);
         }
     }
 
